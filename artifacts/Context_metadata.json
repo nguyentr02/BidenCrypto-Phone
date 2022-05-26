@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"BidenCryto-Phone\\assets\\Sol-File\\Context.sol": "Context"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"BidenCryto-Phone\\assets\\Sol-File\\Context.sol": {
+			"keccak256": "0x74f70309f9363714741a64262f38f4014e62b3333582f52cc74d22c373f682a2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://472e2771fc6ab1c0d13e70e2312106a453ed4929d86fe2e1b88c2ab8ef81af94",
+				"dweb:/ipfs/QmbyvZEtgpMMt5xvcGZ2dkMK8mgQsDC48uLMaZya2nK1NZ"
+			]
+		}
+	},
+	"version": 1
+}
