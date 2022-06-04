@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Box, Button, Spacer } from "native-base";
 import Icons from '../../components/Icons/Icons';
 
 export default function HomeScreen({ navigation }) {
@@ -10,8 +11,17 @@ export default function HomeScreen({ navigation }) {
                 style={styles.header_text}
             >Welcome to BidenCrypto!</Text>
             <Text
-                styles={styles.sub_header_text}
-            >Make your first investment today</Text>
+                style={styles.sub_header_text}>
+                Make your first investment today
+            </Text>
+            <Box alignItems="center">
+                <Button onPress={() => console.log("hello world")}>Add payment method</Button>
+            </Box>
+
+            <Text>
+                Watchlist
+            </Text>
+
         </View>
     )
 }
@@ -29,8 +39,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     sub_header_text: {
-        fontSize: 22,
-        fontWeight: 'bold',
-        color: '707070',
-    }
+        fontSize: 16,
+        fontWeight: 'thin',
+        color: '#707070',
+    },
 });
