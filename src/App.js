@@ -1,13 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import MainContainer from './navigation/MainContainer';
+import AppLoading from 'expo-app-loading';
+import { useFonts, Montserrat_100Thin } from '@expo-google-fonts/montserrat';
 
 export default function App() {
+  // let [fontsLoaded] = useFonts({
+  //   Montserrat_100Thin,
+  // });
+
+  // if (!fontsLoaded) {
+  //   return <AppLoading />;
+  // }
+
   return (
     // <View style={styles.container}>
-    //   <Text>lz minh hung ngu lam
-    //   </Text>
-    //   <StatusBar style="auto" />
     // </View>
     <MainContainer />
   );
