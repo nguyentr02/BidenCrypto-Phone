@@ -6,7 +6,7 @@ import {
 useFonts,
 } from "@expo-google-fonts/dev";
 
-export default function App (){
+export default function Test (){
 
 	let [fontsLoaded] = useFonts({
 	});
