@@ -8,6 +8,8 @@ const WatchList = () => {
         // <Text style={styles.header_text}>
         //     Watchlist
         // </Text>
+        
+
         <Flex
             alignItems="center"
             flexDirection='row'
@@ -15,9 +17,9 @@ const WatchList = () => {
             w='90%'
             h='20'
             p={4}
-            borderWidth={2}
+            borderWidth={1}
             borderRadius={10}
-            borderColor='CFCFCF'
+            borderColor='#CFCFCF'
         >
             <Bitcoin/>
             <Flex
@@ -25,15 +27,25 @@ const WatchList = () => {
                 flexDirection='column'
                 flex={1}
             >
-                <Text>Bitcoin</Text>
-                <Text>BTC</Text>
+                <Text
+                style={{
+                    fontWeight: '700'
+                }}>Bitcoin</Text>
+                <Text
+                    style={{
+                        fontWeight: '400'
+                    }}
+                >BTC</Text>
             </Flex>
             <Flex
                 flexDirection='column'
 
             >
                 <Text>$38,650</Text>
-                <Text>+3.88%</Text>
+                <Text
+                    style={{
+                        color: '#3F845F'
+                    }}>+3.88%</Text>
             </Flex>
         </Flex>
     )

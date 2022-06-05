@@ -29,8 +29,28 @@ export default function HomeScreen({ navigation }) {
                 >Add payment method</Button>
             </Box>
 
-            <WatchList/>
-            
+            <Box
+                mt="5"
+                w="90%"
+                h="8"
+                alignItems="flex-start">
+                <Text
+                    style={styles.header_text}
+                >Watchlist</Text>
+            </Box>
+
+            <WatchList />
+
+            <Box
+                mt="5"
+                w="90%"
+                h="8"
+                alignItems="flex-start">
+                <Text
+                    style={styles.header_text}
+                >Top movers</Text>
+            </Box>
+
 
         </View>
     )
