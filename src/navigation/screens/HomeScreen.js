@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Box, Button, Spacer } from "native-base";
+import { Box, Button, Flex } from "native-base";
+import { SvgCssUri } from 'react-native-svg';
 import Icons from '../../components/Icons/Icons';
+import WatchList from '../../components/Home/WatchList/WatchList';
 
 export default function HomeScreen({ navigation }) {
     return (
@@ -14,13 +16,21 @@ export default function HomeScreen({ navigation }) {
                 style={styles.sub_header_text}>
                 Make your first investment today
             </Text>
-            <Box alignItems="center">
-                <Button onPress={() => console.log("hello world")}>Add payment method</Button>
+            <Box w="90%"
+                h="20"
+                alignItems="center">
+                <Button
+                    justifyContent="center"
+                    mt="5"
+                    bg="#5275EC"
+                    w="100%"
+                    h="12"
+                    onPress={() => console.log("hello world")}
+                >Add payment method</Button>
             </Box>
 
-            <Text>
-                Watchlist
-            </Text>
+            <WatchList/>
+            
 
         </View>
     )
@@ -35,12 +45,18 @@ const styles = StyleSheet.create({
     image: {
     },
     header_text: {
-        fontSize: 26,
+        fontSize: 20,
         fontWeight: 'bold'
     },
     sub_header_text: {
         fontSize: 16,
-        fontWeight: 'thin',
+        fontWeight: '200',
+        marginTop: 5,
         color: '#707070',
     },
+    watchlist_header: {
+        textAlign: 'left',
+    }
 });
+
+export { styles }
