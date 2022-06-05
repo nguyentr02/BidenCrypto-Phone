@@ -1,13 +1,25 @@
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { Box, Button, Flex } from "native-base";
+import { View, Text, StyleSheet, useWindowDimensions } from 'react-native';
+import { Box, Button, Flex, ScrollView } from "native-base";
 import { SvgCssUri } from 'react-native-svg';
 import Icons from '../../components/Icons/Icons';
 import WatchList from '../../components/Home/WatchList/WatchList';
+import Carousel from '../../components/Carousel/Carousel';
 
 export default function HomeScreen({ navigation }) {
+    const { height, width } = useWindowDimensions();
+
     return (
-        <View style={styles.container}>
+        <ScrollView
+            maxW={height} h="80" _contentContainerStyle={{
+                // minW: "72",
+                // flex: '1',
+                backgroundColor: '#fff',
+                alignItems: 'center',
+                showsHorizontalScrollIndicator: false,
+            }}>
+
+
             <Icons style={styles.image} />
             <Text
                 style={styles.header_text}
@@ -51,8 +63,20 @@ export default function HomeScreen({ navigation }) {
                 >Top movers</Text>
             </Box>
 
+            <Carousel />
 
-        </View>
+            <Box
+                mt="5"
+                w="90%"
+                h="8"
+                alignItems="flex-start">
+                <Text
+                    style={styles.header_text}
+                >Learn about Polygon</Text>
+            </Box>
+
+
+        </ScrollView>
     )
 }
 
@@ -78,5 +102,3 @@ const styles = StyleSheet.create({
         textAlign: 'left',
     }
 });
-
-export { styles }
