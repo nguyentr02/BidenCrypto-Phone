@@ -11,8 +11,8 @@ export default function App() {
     // </View>
     <NativeBaseProvider>
       {/* <StartScreen/> */}
-      <LoginScreen/>
-      {/* <MainContainer /> */}
+      {/* <LoginScreen/> */}
+      <MainContainer />
     </NativeBaseProvider>
   );
 }
