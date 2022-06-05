@@ -10,9 +10,9 @@ export default function App() {
     // <View style={styles.container}>
     // </View>
     <NativeBaseProvider>
-      <StartScreen/>
+      {/* <StartScreen/> */}
       {/* <LoginScreen/> */}
-      {/* <MainContainer /> */}
+      <MainContainer />
     </NativeBaseProvider>
   );
 }
