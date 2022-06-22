@@ -29,7 +29,7 @@ CREATE TABLE TBL_ACCOUNT
 	ID INT IDENTITY PRIMARY KEY,
 	ID_USER INT FOREIGN KEY(ID_USER) REFERENCES TBL_USER,
 	USER_NAME VARCHAR(255),
-	PASS_WORD VARCHAR(255),
+	PASS_WORD VARCHAR(255)
 )
 GO
 
@@ -38,8 +38,7 @@ CREATE TABLE TBL_COIN
 (
 	ID INT IDENTITY PRIMARY KEY,
 	COIN_NAME VARCHAR(255),
-	IMAGE VARCHAR(255),
-	QUANTITY INT DEFAULT 10
+	IMAGE VARCHAR(255)
 )
 GO
 
@@ -49,7 +48,8 @@ CREATE TABLE TBL_USER_ASSET_COIN
 	ID INT IDENTITY PRIMARY KEY,
 	ID_USER INT FOREIGN KEY(ID_USER) REFERENCES TBL_USER,
 	ID_COIN INT FOREIGN KEY(ID_COIN) REFERENCES TBL_COIN,
-	COIN_QUANTITY INT
+	COIN_QUANTITY INT,
+	COIN_VALUE FLOAT
 )
 GO
 
@@ -92,3 +92,44 @@ CREATE TABLE TBL_TRADING_SELL
 )
 GO
 
+/*TBL_USER*/
+
+-- Add New User Function
+INSERT INTO TBL_USER(NAME, EMAIL) VALUES('${Name_Value}','${Email_Value}')
+-- Note: Name_Value and Email_Value are user's inputs
+
+------------------------------------------------------------------------
+
+/*TBL_ACCOUNT*/
+
+-- Add New Account Function
+INSERT INTO TBL_ACCOUNT(USER_NAME, PASS_WORD) VALUES('${User_Name_Value}','${Pass_Word_Value}')
+-- Note: User_Name_Value and Pass_Word_Value are user's inputs
+
+-- New Password
+UPDATE TBL_ACCOUNT SET PASS_WORD = ${New_Pass_Word_Value} WHERE USER_NAME = ${User_Name_Value}
+-- Note: User_Name_Value and New_Pass_Word_Value are user's inputs
+
+------------------------------------------------------------------------
+
+/*TBL_USER_ASSET*/
+-- Deposit money
+-- Withdraw money
+-- Buy and sell function
+
+/*TBL_COIN*/
+-- Adding new coin
+-- Removing coin BTC ETH 
+
+/*TBL_USER_ASSET_COIN*/
+-- Save coin asset
+-- Save coin value
+-- Calculate coin value
+
+/*TBL_TRADING*/
+--Save trading information
+--Show data in diagram
+--Update tbl_user_asset and tbl_user_asset_coin
+
+/*TBL_TRADING_SELL/BUY*/
+-- Show history
