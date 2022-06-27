@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { TouchableOpacity, StyleSheet, View } from 'react-native'
 import { Text } from 'react-native-paper'
 import Background from '../../components/Background'
-
 import Header from '../../components/Header'
 import Button from '../../components/Button'
 import TextInput from '../../components/TextInput'
@@ -27,13 +26,13 @@ export default function LoginScreen({ navigation }) {
       }
       navigation.reset({
         index: 0,
-        routes: [{ name: 'Home' }],
+        routes: [{ name: 'MainContainer' }],
       })
     }
   
     return (
       <Background>
-        <BackButton  />
+        
         
         <Header>Sign in to BidenCrypto</Header>
         <TextInput

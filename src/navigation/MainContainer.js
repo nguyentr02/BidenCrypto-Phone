@@ -20,9 +20,9 @@ const pricesName = "Prices";
 
 const Tab = createBottomTabNavigator();
 
-export default function MainContainer() {
+function MainContainer() {
   return (
-    <NavigationContainer>
+    <NavigationContainer independent={true}>
       <Tab.Navigator
         initialRouteName={homeName}
         screenOptions={({ route }) => ({
@@ -53,3 +53,4 @@ export default function MainContainer() {
     </NavigationContainer>
   );
 }
+export default MainContainer;
