@@ -1,14 +1,12 @@
 <?php
 
-class User{
+class User_Asset{
     private $conn;
 
     //question property
     public $ID;
-    public $NAME;
-    public $EMAIL;
-    public $USER_NAME;
-    public $PASSWORD;
+    public $ID_USER;
+    public $TOTAL_MONEY;
 
     //connect db
     public function __construct($db)
@@ -17,32 +15,29 @@ class User{
     }
 
     //read data
-    public function read_all_user(){
-        $query = "SELECT * FROM tbl_account_user ORDER BY ID ASC";
+    // public function read_all_user(){
+    //     $query = "SELECT * FROM tbl_account_user ORDER BY ID ASC";
 
-        $stmt = $this->conn->prepare($query);
-
-        $stmt->execute();
-
-        return $stmt;
-    }
-
-    // public function show(){
-    //     $query = "SELECT * FROM tbl_question WHERE ID_QUESTION =? LIMIT 1";
     //     $stmt = $this->conn->prepare($query);
-    //     $stmt->bindParam(1, $this->ID_QUESTION);
+
     //     $stmt->execute();
 
-    //     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //     $this->TITLE = $row['TITLE'];
-    //     $this->OPTION_A = $row['OPTION_A'];
-    //     $this->OPTION_B = $row['OPTION_B'];
-    //     $this->OPTION_C = $row['OPTION_C'];
-    //     $this->OPTION_D = $row['OPTION_D'];
-    //     $this->RIGHT_ANSWER = $row['RIGHT_ANSWER'];
-        
+    //     return $stmt;
     // }
+
+    public function show_user_asset(){
+        $query = "SELECT * FROM tbl_user_asset WHERE ID_USER =? LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(1, $this->ID_USER);
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $this->ID = $row['ID'];
+        //$this->ID_USER = $row['ID_USER'];
+        $this->TOTAL_MONEY = $row['TOTAL_MONEY'];
+        
+    }
 
     // public function create(){
     //     $query = "INSERT INTO tbl_question SET TITLE=:TITLE, OPTION_A=:OPTION_A,

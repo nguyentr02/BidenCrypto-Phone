@@ -4,13 +4,13 @@
     header('Content-Type: application/json');
 
     include_once $_SERVER['DOCUMENT_ROOT'].'/BidenCrypto-Phone/Config/db.php';
-    include_once $_SERVER['DOCUMENT_ROOT'].'/BidenCrypto-Phone/Model/user.php';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/BidenCrypto-Phone/Model/user_info.php';
 
     $db = new db();
     $connect = $db->connect();
 
-    $user = new User($connect);
-    $read = $user->read_all_user();
+    $user_info = new User_Info($connect);
+    $read = $user_info->read_all_user();
 
     $num = $read->rowCount();
     if($num>0){
