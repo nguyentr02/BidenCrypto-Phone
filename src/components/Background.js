@@ -5,11 +5,14 @@ import { theme } from '../core/theme'
 export default function Background({ children }) {
   return (
     <ImageBackground
-      
+
       resizeMode="repeat"
       style={styles.background}
     >
-      <KeyboardAvoidingView style={styles.container} behavior="padding">
+      <KeyboardAvoidingView style={styles.container}
+        behavior={Platform.OS === "ios"}
+        keyboardVerticalOffset={Platform.OS == "ios" ? 0 : 20}
+        enabled={Platform.OS === "ios" ? true : false}>
         {children}
       </KeyboardAvoidingView>
     </ImageBackground>
@@ -23,7 +26,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.surface,
   },
   container: {
-    flex:1,
+    flex: 1,
     padding: 20,
     width: '100%',
     maxWidth: 340,
