@@ -7,8 +7,7 @@ class User_Info{
     public $ID;
     public $NAME;
     public $EMAIL;
-    public $USER_NAME;
-    public $PASSWORD;
+    public $PASS_WORD;
 
     //connect db
     public function __construct($db)
@@ -26,6 +25,20 @@ class User_Info{
 
         return $stmt;
     }
+
+    //login function
+    public function login_user(){
+        $query = "SELECT * FROM tbl_account_user WHERE EMAIL =:EMAIL AND PASS_WORD=:PASS_WORD LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        
+        $stmt->bindParam(':EMAIL', $this->EMAIL);
+        $stmt->bindParam(':PASS_WORD', $this->PASS_WORD);
+
+        $stmt->execute();
+
+        return $stmt;
+    }
+
 
     // public function show(){
     //     $query = "SELECT * FROM tbl_question WHERE ID_QUESTION =? LIMIT 1";

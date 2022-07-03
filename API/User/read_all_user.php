@@ -3,8 +3,8 @@
     header('Access-Control-Allow-Origin:*');
     header('Content-Type: application/json');
 
-    include_once $_SERVER['DOCUMENT_ROOT'].'/BidenCrypto-Phone/Config/db.php';
-    include_once $_SERVER['DOCUMENT_ROOT'].'/BidenCrypto-Phone/Model/user_info.php';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/Config/db.php';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/Model/user_info.php';
 
     $db = new db();
     $connect = $db->connect();
@@ -25,7 +25,6 @@
                 'id' => $ID,
                 'name' => $NAME,
                 'email' => $EMAIL,
-                'user_name' => $USER_NAME,
                 'password' => $PASS_WORD,
             );
 

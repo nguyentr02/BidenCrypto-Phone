@@ -1,11 +1,17 @@
 <?php
 class db{
 
-    private $servername = "localhost";
-    private $username = "root";
-    private $password = "";
-    private $db = "crypto_app";
+    private $servername = "fdb33.awardspace.net";
+    private $username = "4089761_ivy";
+    private $password = "xbUIv)V@0+GyH#mU";
+    private $db = "4089761_ivy";
     private $conn;
+
+    // private $servername = "localhost";
+    // private $username = "root";
+    // private $password = "";
+    // private $db = "crypto_app";
+    // private $conn;
 
     public function connect(){
         $this->conn = null;
