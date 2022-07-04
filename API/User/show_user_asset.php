@@ -23,6 +23,7 @@
             extract($row);
 
             $user_asset_coin_item = array(
+                'coin_id' => $ID_COIN,
                 'coin_name' => $COIN_NAME,
                 'coin_quantity' => $COIN_QUANTITY,
                 'coin_value' => $COIN_VALUE

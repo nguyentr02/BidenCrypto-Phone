@@ -23,10 +23,10 @@
     $question->RIGHT_ANSWER = $data->right_answer;
 
     if($question->create()){
-        echo json_encode(array('message','Question was created'));
+        echo json_encode(array('message'=>'Question was created'));
     }
     else{
-        echo json_encode(array('message','Question was not created'));
+        echo json_encode(array('message'=>'Question was not created'));
     }
 
 
