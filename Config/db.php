@@ -7,12 +7,6 @@ class db{
     private $db = "4089761_ivy";
     private $conn;
 
-    // private $servername = "localhost";
-    // private $username = "root";
-    // private $password = "";
-    // private $db = "crypto_app";
-    // private $conn;
-
     public function connect(){
         $this->conn = null;
         try {

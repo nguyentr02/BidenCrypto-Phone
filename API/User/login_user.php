@@ -17,16 +17,17 @@
     $user_info->EMAIL = $data->email;
     $user_info->PASS_WORD = $data->password;
 
-
-    // echo $user_info->EMAIL;
-    // echo $user_info->PASS_WORD;
-
     $login = $user_info->login_user();
 
     $num = $login->rowCount();
 
     if($num > 0){
-        echo json_encode(array('message'=>'success'));
+        echo json_encode(array(
+            'message'=>'success',
+            'id' => $user_info->ID,
+            'name' => $user_info->NAME,
+            'email' => $user_info->EMAIL,
+        ));
     }
     else{
         echo json_encode(array('message'=>'failed'));
