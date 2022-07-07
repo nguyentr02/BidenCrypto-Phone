@@ -1,21 +1,48 @@
 # BIDEN EATS 🍽
 A food delivery app built with React Native, Firebase & Redux by Attendance Team.
 
-## Main Features
+### Main Features
 - Sign Up
 - Log In
 - Browse Food & Drinks
 - Order Food & Drinks
 
-## Setting Up
-- Install packages with `yarn` or `npm install`.
-  - If you have native iOS code run `npx pod-install`
-- Run `yarn start` to start the bundler.
+### Setting Up
+Install these things in order to run the app
+* [Node.js v16.15.0](https://nodejs.org/fa/blog/release/v16.15.0/)
+* [Git](https://git-scm.com/)
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+* Expo CLI 
+   ```sh
+  npm install --global expo-cli
+  ```
+
+
+### App Installation
+1. Clone the repo 
+   ```sh
+   git clone 
+   ```
+2. Go to root directory
+   ```sh
+   cd biden-eats
+   ```
+3. Install packages with Yarn.
+   ```sh
+   yarn
+   ```
+4. Run the app
+   ```sh
+   yarn start
+   ```
 - Open the project in Expo:
   - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
   - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
   
-## Team Member
+### Team Member
 - Nguyen Huu Minh Duc
 - Tran Dinh Duy
 - Le Tri Hieu
