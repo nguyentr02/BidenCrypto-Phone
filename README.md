@@ -18,7 +18,9 @@ Install these things in order to run the app
 * Expo CLI 
    ```sh
   npm install --global expo-cli
-  ```
+* If you are using physical device, download Expo app to run
+  - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
+  - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
 
 
 ### App Installation
@@ -38,9 +40,7 @@ Install these things in order to run the app
    ```sh
    yarn start
    ```
-- Open the project in Expo:
-  - iOS: [Client iOS](https://itunes.apple.com/app/apple-store/id982107779)
-  - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
+
   
 ### Team Member
 - Nguyen Huu Minh Duc
