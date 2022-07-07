@@ -30,7 +30,7 @@ Install these things in order to run the app
    ```sh
    cd biden-eats
    ```
-3. Install packages with Yarn.
+3. Install packages with Yarn
    ```sh
    yarn
    ```
